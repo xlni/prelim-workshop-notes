@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  22 JUL 2018 20:20
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  23 JUL 2018 16:48
 entering extended mode
 **./main.tex
 (main.tex
@@ -988,7 +988,7 @@ Package: xparse 2018-05-12 L3 Experimental document command parser
 .................................................
 . LaTeX info: "xparse/define-command"
 . 
-. Defining command \deriv with sig. 'O{x} O{}' on line 58.
+. Defining command \deriv with sig. 'O{x} O{}' on line 61.
 .................................................
 ) (main.aux)
 \openout1 = `main.aux'.
@@ -1148,45 +1148,60 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 4.
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\umsb.fd"
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-Overfull \hbox (4.59152pt too wide) in paragraph at lines 7--8
- \OT1/MinionPro-LF/b/n/10 So-lu-tion 1:[] \OT1/MinionPro-LF/m/n/10 The di-rect 
-proof that first came to my mind goes as fol-lows: con-sider $\OML/MinionPro-TO
-sF/m/it/10 f[]\OMX/MnSymbolE/m/n/10 ò\T1/MinionPro-LF/m/n/10 0\OMX/MnSymbolE/m/
-n/10 ù \U/MnSymbolC/m/n/10 9
+Overfull \hbox (2.74751pt too wide) in paragraph at lines 6--8
+[]\OT1/MinionPro-LF/m/n/10 [1] The di-rect proof that first came to my mind goe
+s as fol-lows: con-sider $\OML/MinionPro-TOsF/m/it/10 f[]\OMX/MnSymbolE/m/n/10 
+ò\T1/MinionPro-LF/m/n/10 0\OMX/MnSymbolE/m/n/10 ù \U/MnSymbolC/m/n/10 9
  []
 
-[3] [4]) ("Analysis/Metric spaces.tex" [5] [6]) [7] [8
+[3] [4]) ("Analysis/Metric spaces.tex" [5] [6]
+Overfull \hbox (15.18263pt too wide) in paragraph at lines 68--69
+[]\OT1/MinionPro-LF/m/n/10 Show that for a fixed point $\OML/MinionPro-TOsF/m/i
+t/10 p \U/MnSymbolD/m/n/10 > \U/msb/m/n/10 R[]$\OT1/MinionPro-LF/m/n/10 , the f
+unc-tion $\OML/MinionPro-TOsF/m/it/10 d\OMX/MnSymbolE/m/n/10 à\OML/MinionPro-TO
+sF/m/it/10 p; \U/MnSymbolC/m/n/10 \OMX/MnSymbolE/m/n/10 ç$ \OT1/MinionPro-LF/m
+/n/10 is closed, us-ing Lemma 1.2.1[]
+ []
+
+) [7] [8
 
 ]
 Chapter 2.
-("Algebra/Group theory.tex" [9] [10]) [11] (main.aux) ) 
+("Algebra/Group theory.tex" [9] [10]) ("Algebra/Rings 1.tex" [11]
+LaTeX Font Info:    Try loading font information for U+euf on input line 6.
+
+("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+) [12] [13]) [14]
+(main.aux) ) 
 Here is how much of TeX's memory you used:
- 26785 strings out of 493303
- 528407 string characters out of 3138834
- 507224 words of memory out of 3000000
- 29926 multiletter control sequences out of 15000+200000
- 671528 words of font info for 84 fonts, out of 3000000 for 9000
+ 26804 strings out of 493303
+ 529173 string characters out of 3138834
+ 509241 words of memory out of 3000000
+ 29935 multiletter control sequences out of 15000+200000
+ 672648 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,82p,595b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
-{C:/Program Files/MiKTeX
- 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/
-enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/m
-nsymbol/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_
-snxwoh.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_so5ulq.enc}
-{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_jidws5.enc}{C:/Program
- Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Program Files/MiKT
-eX 2.9/fonts/enc/dvips/MinionPro/a_6lqhnj.enc}{C:/Program Files/MiKTeX 2.9/font
-s/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips
-/MinionPro/a_7bszhd.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/
-a_knduqf.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/MinionPro/MinionPro
--Bold.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/MinionPro/MinionPro-It
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/MinionPro/MinionPro-Regular
-.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol10.pfb><C
-:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol7.pfb><C:/Progra
-m Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb>
-Output written on main.pdf (11 pages, 240579 bytes).
+{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_jidws5.enc
+}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Progra
+m Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiK
+TeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.9/fon
+ts/enc/dvips/MinionPro/a_so5ulq.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvip
+s/mnsymbol/MnSymbolC.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro
+/a_snxwoh.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_6lqhnj.e
+nc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Prog
+ram Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_7bszhd.enc}{C:/Program Files/M
+iKTeX 2.9/fonts/enc/dvips/MinionPro/a_knduqf.enc}<C:/Program Files/MiKTeX 2.9/f
+onts/type1/adobe/MinionPro/MinionPro-Bold.pfb><C:/Program Files/MiKTeX 2.9/font
+s/type1/adobe/MinionPro/MinionPro-It.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/adobe/MinionPro/MinionPro-Regular.pfb><C:/Program Files/MiKTeX 2.9/fonts/typ
+e1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/publ
+ic/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
+nts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/s
+ymbols/msbm10.pfb>
+Output written on main.pdf (14 pages, 262232 bytes).
 PDF statistics:
- 100 PDF objects out of 1000 (max. 8388607)
+ 116 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 

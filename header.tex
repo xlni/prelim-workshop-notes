@@ -32,7 +32,8 @@
 \newtheorem{lem}{\protect\lemmaname}[section]
 \theoremstyle{definition}
 \newtheorem{xca}{\protect\exercisename}[section]
-\newenvironment{solution}[1][\unskip]{\paragraph{Solution {#1}:}}{\hfill$\square$}
+%\newenvironment{solution}[1][\unskip]{\paragraph{Solution {#1}:}}{\hfill$\square$} %old solution env
+\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
 
 \providecommand{\definitionname}{Definition}
 \providecommand{\examplename}{Example}
@@ -53,6 +54,8 @@
 
 %macros, etc.
 \newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\mf}[1]{\mathfrak{#1}}
 \newcommand{\subeq}{\subseteq}
 \DeclareMathOperator{\Stab}{Stab}
+\DeclareMathOperator{\Spec}{Spec}
 \NewDocumentCommand{\deriv}{O{x} O{}}{\frac{\mathrm{d}{#2}}{\mathrm{d}{#1}}}
