@@ -1,0 +1,71 @@
+\section{7/20/18: Metric spaces}
+\begin{problem}
+	Let $X \subeq \bb{R}^n$ be compact and let $f\colon X\to \bb{R}$ be continuous. Given $\epsilon > 0$, show there is an $M$ such that for all $x,y\in X$,
+	\[
+		|f(x) - f(y)|\leq M|x-y|+\epsilon.
+	\]
+\end{problem}
+\begin{solution}
+	A continuous function on a compact set is uniformly continuous, and also is bounded (by some $C$). So there exists $\delta > 0$ for which $|x-y| < \delta \implies |f(x)-f(y)|<\epsilon$.
+	
+	Then pick $M$ large enough so that $M\delta > 2C$. 
+\end{solution}
+
+\begin{problem}
+	Let $K$ be a continuous function on the closed unit square satisfying $|K(x,y)|<1$ for all $x$ and $y$. Show that there is a continuous function $f(x)$ on $[0,1]$ such that we have
+	\[
+		f(x) + \int_0^1 K(x,y)f(y) \mathrm{d} y = e^{x^2}.
+	\]
+	Can there be more than one such function $f$?
+\end{problem}
+\begin{solution}
+	The fact that $|K(x,y)|<1$ is a hint that the fixed point theorem for a contraction may be involved. According to Albert, this theorem is a common way of answering these integral equation type problems.
+	
+	Consider the operator $T$ defined as
+	\[
+		T(f)(x) = e^{x^2} - \int_0^1 K(x,y)f(y) \mathrm{d} y.
+	\]
+	We claim that $T\colon C([0,1]) \to C([0,1])$ is a contraction, where $C([0,1])$ is equipped with the supremum norm. There are two parts to this claim: the fact that $T(f)$ is a continuous function of $x$, and that $T$ is a contraction. Both parts essentially rely on compactness of the unit square, which tells us that
+	\begin{itemize}
+		\item $|K(x,y)|$ is uniformly continuous. This can be used to show that $T(f)$ is continuous.
+		\item $|K(x,y)|$ has a maximum strictly less than $1$. This is used to show that $T$ is a contraction. Note that the definition of a contraction is \emph{not} that $d(T(f),T(g)) < d(f,g)$, but that there is a constant $\alpha <1$ such that $d(T(f),T(g)) \leq \alpha d(f,g)$.
+	\end{itemize}
+	Finally, we use the fact that $C([0,1])$ is a complete metric space. This can probably just be cited, but the proof is not difficult: it just uses the fact that if continuous functions converge uniformly to another function, then that other function is also continuous.
+	
+	With all these ingredients, we can invoke the fixed point theorem to deduce that $T$ has a \emph{unique} fixed point which is then the solution to the integral equation.
+\end{solution}
+
+\begin{lem}\label{lem:separate-compact-closed-in-metric}
+	In a metric space, a compact set and a closed set can be separated by a positive distance.
+\end{lem}
+
+\begin{problem}
+	Let $X$ be a compact metric space and $f\colon X\to X$ an isometry. Show that $f(X)=X$.
+\end{problem}
+\begin{solution}
+	Assume otherwise, and chase an element $x\in X\setminus f(X)$ around using $f$. Note that $x$ has some positive distance away from $f(X)$, which is compact.
+\end{solution}
+
+\begin{problem}
+	Let $F$ be a uniformly bounded, equicontinuous family of real valued function on the metric space $(X,d)$. Prove that the function
+	\[
+		g(x) = \sup\{f(x) : f\in F\}
+	\]
+	is continuous.
+\end{problem}
+\begin{solution}
+	The hypotheses appearing in this question suggest the usage of Arzela-Ascoli, but that is actually a red herring. This can be easily proved directly by noting that if $x, \epsilon > 0$ are given and $\delta$ is picked as in the definition of equicontinuity, then for $|x-y| < \delta$ we have
+	\begin{align*}
+		g(y) &= \sup_f f(y) \leq \sup_f (f(x) + \epsilon) = \sup_f f(x) + \epsilon = g(x) + \epsilon\\
+		g(y) &= \sup_f f(y) \geq \sup_f (f(x) - \epsilon) = \sup_f f(x) - \epsilon = g(x) - \epsilon.
+	\end{align*}
+\end{solution}
+
+\begin{problem}
+	Let $X \subeq \bb{R}^n$ be a closed set and $r$ a fixed positive real number. Let $Y = \{y\in \bb{R}^n : \exists x\in X, |x-y| = r\}$. Show that $Y$ is closed.
+\end{problem}
+\begin{solution}
+	Show that for a fixed point $p\in \bb{R}^n$, the function $d(p,-)$ is closed, using Lemma~\ref{lem:separate-compact-closed-in-metric} and compactness of the sphere. If $p \notin Y$, then $d(p,X)$ is closed and does not contain $r$. So pick a ball around $r \in \bb{R}$ which doesn't meet $d(p,X)$, and consider the ball around $p \in \bb{R}^n$ of the same radius. This ball will be disjoint from $Y$ by the triangle inequality. Thus $Y$ is closed.
+	
+	Well, you could reorganize this argument and just show that the sphere of radius $r$ around $p$ is separated by some $\epsilon > 0$ from $X$.
+\end{solution}

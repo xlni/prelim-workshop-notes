@@ -1,0 +1,106 @@
+\section{7/16/18: Ordinary differential equations}
+
+\begin{problem}[Gronwall's inequality]
+	Suppose $f$ is a differentiable function from the reals into the reals. Suppose $f'(x) > f(x)$ for all $x\in \bb{R}$, and $f(x_0) = 0$. Prove that $f(x) > 0$ for all $x > x_0$.
+\end{problem}
+\begin{solution}[1]
+	The direct proof that first came to my mind goes as follows: consider $f^{-1}\{0\} \cap (x_0, \infty)$. Show that this set has a minimum; call it $x_1$.
+	
+	Then use the mean value theorem to deduce that $f'$ vanishes between $x_0$ and $x_1$. But then $f$ must be negative there, and from here we can derive a contradiction.
+\end{solution}
+\begin{solution}[2]
+	This is the solution Albert gave in class. Basically, rearrange the inequality as
+	\[
+		f'(x) - f(x) > 0
+	\]
+	and then introduce an ``integrating factor'' so that the LHS is the derivative of a product:
+	\begin{align*}
+		e^{-x} f'(x) - e^{-x} f(x) &> 0\\
+		\deriv[x](e^{-x}f(x)) &> 0. 
+	\end{align*}
+	Observe that $e^{-x}f(x)$ is positive and strictly increasing for $x > x_0$. The same is true of the function $e^x$, so we deduce their product $f(x)$ is positive and strictly increasing as well for $x > x_0$.
+\end{solution}
+\begin{rem*}
+	If one has an inequality like $u'(t) < \beta(t) u(t)$, one first finds $v$ which solves $v'(t) = \beta(t) v(t)$ and then computes the derivative of $u/v$ to deduce that this ratio is increasing or decreasing (as the case may be). Then compare to its initial value at $t_0$.
+\end{rem*}
+
+\begin{problem}
+	Let $n$ be an integer larger than $1$. Is there a differentiable function on $[0,\infty)$ whose derivative equals its $n$th power and whose value at the origin is positive?
+\end{problem}
+\begin{solution}
+	The differential equation is
+	\[
+		\deriv[x][y] = y^n; \quad y(0) > 0.
+	\]
+	The conditions of Picard's theorem are satisfied so we have local existence and uniqueness. The latter is the useful deduction---the above differential equation is easy to solve directly. Simply observe that the solutions all have vertical asymptotes at positive $x$, so there can be no continuous solution defined on all of $[0,\infty)$.
+\end{solution}
+
+\begin{problem}
+	Prove that the initial value problem
+	\[
+		\deriv[t][x] = 3x + 85 \cos x; \quad x(0)=77
+	\]
+	has a solution $x(t)$ defined for all $t\in \bb{R}$.
+\end{problem}
+\begin{solution}
+	For this problem, it is very useful to have a quantitative form of Picard's theorem. Suppose we have a differential equation of the form
+	\[
+		\deriv[t][x] = f(x,t),
+	\]
+	i.e. a ``slope field'' given by $f$, defined on some rectangle $[t_0 - a, t_0 + a] \times [x_0 - b, x_0 + b]$.
+	
+	If $f$ is continuous with respect to $t$ and uniformly Lipschitz with respect to $x$ (in the sense that the Lipschitz constant may be picked independently of $t$) then there is a unique solution passing through $(t_0, x_0)$ defined for $t\in [t_0 - \alpha, t_0 + \alpha]$ where
+	\[
+		\alpha = \min(a, b/(\sup |f|)).
+	\]
+	In our problem, by picking $b$ large enough, we can always ensure that $b/\sup f > 1/4$ for example. So repeated application of Picard's theorem shows that there is a (unique) solution $x(t)$ defined for all $t \in \bb{R}$.
+\end{solution}
+
+\begin{problem}
+	Let $f\colon \bb{R}\to\bb{R}$ be a continuous nowhere vanishing function, and consider the differential equation
+	\[
+		\deriv[x][y] = f(y).
+	\]
+	\begin{enumerate}
+		\item For each real number $c$, show that this equation has a unique continuously differentiable solution $y=y(x)$ on a neighborhood of $0$ which satisfies the initial condition $y(0) = c$.
+		\item Deduce the conditions on $f$ under which the solution $y$ exists for all $x\in \bb{R}$, for every initial value $c$.
+	\end{enumerate}
+\end{problem}
+\begin{solution}\hfill
+	\begin{enumerate}
+		\item The idea is that we can just ``solve'' this differential equation by ``separation of variables.'' To be rigorous, we will invoke the inverse function theorem.
+		
+		Let us instead consider the differential equation
+		\[
+			\deriv[y][x] = \frac{1}{f(y)}.
+		\]
+		The RHS is a continuous function; consider $x(y) = \int_c^y \frac{\mathrm{d}t}{f(t)}$. This function is continuously differentiable, and is the \emph{unique} solution to the above equation with $x(c)=0$. Moreover, $x'(c) \neq 0$ so the inverse function theorem tells us that it (locally) has a continuously differentiable inverse $y(x)$ which satisfies $y(0) = c$ and the differential equation
+		\[
+			\deriv[x][y] = f(y)
+		\]
+		as desired. Uniqueness also follows from the IFT.
+		\item The function $x(y)$ defined previously is either strictly increasing or strictly decreasing. In order for $y(x)$ to be defined for all $x\in \bb{R}$, it is necessary and sufficient for $x(y)$ to be surjective.
+	\end{enumerate}
+\end{solution}
+
+\begin{problem}
+	Consider the equation
+	\[
+		\deriv[x][y] = y -\sin y.
+	\]
+	Show that there is an $\epsilon >0$ such that if $|y_0|<\epsilon$, then the solution $y = f(x)$ with $f(0) = y_0$ satisfies
+	\[
+		\lim_{x\to -\infty} f(x) = 0.
+	\]
+\end{problem}
+\begin{solution}
+	Actually, $\epsilon$ can be taken to be anything---the result holds for any $y_0$.
+	
+	Albert mentioned that there isn't a specific tool or theorem that immediately knocks out this problem. The strategy here is more or less to slowly chip away at the problem. Drawing a picture helps \emph{a lot}.
+	
+	Note that $y - \sin y$ is an odd function. If $y=f(x)$ is a solution to the differential equation, then so is $y = -f(x)$. Also, the hypotheses of Picard's theorem are satisfied, so solutions are locally unique. The function $y=0$ is the solution with $y_0 = 0$.
+	
+	So we may as well assume $y_0 > 0$. The solution $y$ cannot cross the $x$-axis, as that would violate uniqueness of solutions. Thus it is always positive, and the differential equation also tells us that it is strictly increasing.
+	
+	Hence the limit in question is the infimum of the range of $y$. We have already established that 0 is a lower bound. Moreover, if $L > 0$ is a lower bound, then $y'$ is \emph{also} bounded below thanks to the differential equation. But then, by the mean value theorem for instance, we must have that $y$ crosses the $x$-axis, a contradiction. Therefore 0 is indeed the desired infimum and we are done.
+\end{solution}

@@ -1,0 +1,58 @@
+\usepackage[latin1]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{mathtools}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+%\usepackage{graphicx}
+\usepackage[headsep=0.15in, left=0.5in, right=0.5in, top=0.6in, bottom=0.5in]{geometry}
+\usepackage[textlf,mathlf]{MinionPro}
+\usepackage{fancyhdr}
+\usepackage{tikz-cd}
+\usepackage{xparse} %for multiple optional arguments
+
+%Environments
+\numberwithin{equation}{section}
+\numberwithin{figure}{section}
+\theoremstyle{definition}
+\newtheorem{example}{\protect\examplename}[section]
+\theoremstyle{remark}
+\newtheorem*{rem*}{\protect\remarkname}
+\theoremstyle{plain}
+\newtheorem{thm}{\protect\theoremname}[section]
+\theoremstyle{plain}
+\newtheorem{cor}{\protect\corollaryname}[section]
+\theoremstyle{definition}
+\newtheorem{defn}{\protect\definitionname}[section]
+\theoremstyle{plain}
+\newtheorem{prop}{\protect\propositionname}[section]
+\theoremstyle{definition}
+\newtheorem{problem}{\protect\problemname}[section]
+\theoremstyle{plain}
+\newtheorem{lem}{\protect\lemmaname}[section]
+\theoremstyle{definition}
+\newtheorem{xca}{\protect\exercisename}[section]
+\newenvironment{solution}[1][\unskip]{\paragraph{Solution {#1}:}}{\hfill$\square$}
+
+\providecommand{\definitionname}{Definition}
+\providecommand{\examplename}{Example}
+\providecommand{\lemmaname}{Lemma}
+\providecommand{\problemname}{Problem}
+\providecommand{\propositionname}{Proposition}
+\providecommand{\remarkname}{Remark}
+\providecommand{\corollaryname}{Corollary}
+\providecommand{\theoremname}{Theorem}
+\providecommand{\exercisename}{Exercise}
+
+%Fancy header and footer configuration
+\fancyhf{}
+\pagestyle{fancy}
+\makeatletter
+\let\ps@plain\ps@fancy   % Plain page style = fancy page style
+\makeatother
+
+%macros, etc.
+\newcommand{\bb}[1]{\mathbb{#1}}
+\newcommand{\subeq}{\subseteq}
+\DeclareMathOperator{\Stab}{Stab}
+\NewDocumentCommand{\deriv}{O{x} O{}}{\frac{\mathrm{d}{#2}}{\mathrm{d}{#1}}}
