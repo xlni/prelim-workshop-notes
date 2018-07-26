@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  23 JUL 2018 17:31
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  25 JUL 2018 20:03
 entering extended mode
 **./main.tex
 (main.tex
@@ -1163,11 +1163,11 @@ sF/m/it/10 p; \U/MnSymbolC/m/n/10 \OMX/MnSymbolE/m/n/10 ç$ \OT1/MinionPro-LF/m
 /n/10 is closed, us-ing Lemma 1.2.1[]
  []
 
-) [7] [8
-
-]
+) ("Analysis/Real analysis 1.tex" [7]) [8]
 Chapter 2.
-("Algebra/Group theory.tex" [9] [10]) ("Algebra/Rings 1.tex" [11]
+("Algebra/Group theory.tex" [9
+
+] [10]) ("Algebra/Rings 1.tex" [11]
 LaTeX Font Info:    Try loading font information for U+euf on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
@@ -1175,21 +1175,21 @@ File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
 ) [12] [13] [14])
 [15] (main.aux) ) 
 Here is how much of TeX's memory you used:
- 26804 strings out of 493303
- 529173 string characters out of 3138834
+ 26807 strings out of 493303
+ 529329 string characters out of 3138834
  509241 words of memory out of 3000000
  29935 multiletter control sequences out of 15000+200000
  672648 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,82p,595b,454s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_jidws
-5.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/P
-rogram Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program File
-s/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.
-9/fonts/enc/dvips/MinionPro/a_so5ulq.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
-/dvips/mnsymbol/MnSymbolC.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/Mini
-onPro/a_snxwoh.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_6lq
-hnj.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:
+5.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/P
+rogram Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program File
+s/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.
+9/fonts/enc/dvips/mnsymbol/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc
+/dvips/MinionPro/a_so5ulq.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsy
+mbol/MnSymbolC.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_snx
+woh.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_6lqhnj.enc}{C:
 /Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_7bszhd.enc}{C:/Program Fi
 les/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_knduqf.enc}<C:/Program Files/MiKTeX 
 2.9/fonts/type1/adobe/MinionPro/MinionPro-Bold.pfb><C:/Program Files/MiKTeX 2.9
@@ -1198,10 +1198,11 @@ s/type1/adobe/MinionPro/MinionPro-Regular.pfb><C:/Program Files/MiKTeX 2.9/font
 s/type1/public/mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1
 /public/mnsymbol/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
 amsfonts/euler/eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfo
-nts/symbols/msbm10.pfb>
-Output written on main.pdf (15 pages, 263505 bytes).
+nts/symbols/msbm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts
+/symbols/msbm7.pfb>
+Output written on main.pdf (15 pages, 270813 bytes).
 PDF statistics:
- 119 PDF objects out of 1000 (max. 8388607)
+ 125 PDF objects out of 1000 (max. 8388607)
  0 named destinations out of 1000 (max. 500000)
  13 words of extra memory for PDF output out of 10000 (max. 10000000)
 
