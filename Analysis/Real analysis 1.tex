@@ -130,12 +130,12 @@
 	
 	Reverse engineering motivation (a.k.a. hindsight is 20/20): we're dealing with a bunch of integrals of products of various similar-looking functions---perhaps we could interpret the integral as a pairing and make use of CS. The first thing you might try to do is
 	\[
-		\left(\int_0^1 x^n f(x) \mathrm{d} x\right)^2 \leq \int_0^2 x^{2n} \mathrm{d} x \int_0^1 f(x)^2 \mathrm{d} x
+		\left(\int_0^1 x^n f(x) \mathrm{d} x\right)^2 \leq \int_0^1 x^{2n} \mathrm{d} x \int_0^1 f(x)^2 \mathrm{d} x
 	\]
 	but this manipulation isn't very useful, mostly because we don't know anything about $\int_0^1 f(x)^2 \mathrm{d} x$.
 	The trick is to instead split $xf(x)$ as $x\sqrt{f(x)} \cdot \sqrt{f(x)}$ (which we can do because we are told that $f$ is non-negative, a fact that we otherwise would not have used!), in which case CS gives
 	\[
-		\int_0^1 x f(x) \mathrm{d}x \leq \int_0^1 x^2 f(x)\mathrm{d}x \int_0^1 f(x) \mathrm{d}x
+		\left(\int_0^1 x f(x) \mathrm{d}x \right)^2\leq \int_0^1 x^2 f(x)\mathrm{d}x \int_0^1 f(x) \mathrm{d}x
 	\]
 	That looks much better. With the constraints in the problem, we actually have equality, and equality only happens in CS when the two vectors being paired are linearly dependent. But this is clearly impossible: if $f(x)$ is nonzero for at least two different values of $x$, then $x\sqrt{f}$ and $\sqrt{f}$ cannot be linearly dependent. And of course, this must be the case since $\int f = 1$.
 \end{solution}
