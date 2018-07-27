@@ -142,7 +142,7 @@
 \begin{solution}[2, Jensen's]
 	Incidentally, apparently the ``J'' in ``Jensen'' is pronounced as a ``Y.'' I feel like I probably should've known this, given how many times I've seen this inequality used in lectures before... but still, worth taking a note of, I guess.
 	
-	This one is a bit easier to reverse engineer motivation for: anyone that has taken a probability class should recognize those integrals as moments! The constraints of the problem tell us that $f$ can be thought of as a probability distribution on $[0,1]$, with first moment $a$ and second moment $a^2$. But $\bb{E}[X^2] - \bb{E}[X]^2 \geq 0$ and equality occurs only when $X$ has no variance whatsoever. That would require $f$ to be a point mass distribution, i.e. the Dirac delta function centered at $a$. But that's not even a function, let alone a continuous one. This is a similar conclusion to what we reached in the other solution.
+	This one is a bit easier to reverse engineer motivation for: anyone that has taken a probability class should recognize those integrals as moments! The constraints of the problem tell us that $f$ can be thought of as a probability distribution on $[0,1]$, with first moment $a$ and second moment $a^2$. But $\bb{E}[X^2] - \bb{E}[X]^2 \geq 0$ and equality occurs only when $X$ has no variance whatsoever. That would require $f$ to be a point mass distribution, i.e. the Dirac delta distribution centered at $a$. But that's not even a function, let alone a continuous one. This is a similar conclusion to what we reached in the other solution.
 	
 	These two solutions actually feel pretty similar... they're probably ``equivalent'' in some sense.
 \end{solution}

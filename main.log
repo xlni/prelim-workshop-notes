@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  26 JUL 2018 20:15
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  26 JUL 2018 20:16
 entering extended mode
 **./main.tex
 (main.tex
@@ -1350,7 +1350,7 @@ Here is how much of TeX's memory you used:
  33894 multiletter control sequences out of 15000+200000
  672648 words of font info for 88 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
- 63i,12n,82p,696b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 63i,12n,82p,700b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_jidws5.enc}{C:/Progr
 am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/Mi
 KTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fo
@@ -1369,7 +1369,7 @@ l/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/
 eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
 m10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.
 pfb>
-Output written on main.pdf (19 pages, 299655 bytes).
+Output written on main.pdf (19 pages, 299658 bytes).
 PDF statistics:
  269 PDF objects out of 1000 (max. 8388607)
  86 named destinations out of 1000 (max. 500000)
