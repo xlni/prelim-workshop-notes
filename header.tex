@@ -1,4 +1,6 @@
 \usepackage[latin1]{inputenc}
+\usepackage{hyperref} %for interactive references
+\usepackage{refstyle} %for newref
 \usepackage{amsmath}
 \usepackage{amsthm}
 \usepackage{mathtools}
@@ -33,7 +35,7 @@
 \theoremstyle{definition}
 \newtheorem{xca}{\protect\exercisename}[section]
 %\newenvironment{solution}[1][\unskip]{\paragraph{Solution {#1}:}}{\hfill$\square$} %old solution env
-\newenvironment{solution}{\begin{proof}[Solution]}{\end{proof}}
+\newenvironment{solution}[1][\unskip]{\begin{proof}[Solution {#1}:]}{\end{proof}}
 
 \providecommand{\definitionname}{Definition}
 \providecommand{\examplename}{Example}
@@ -44,6 +46,8 @@
 \providecommand{\corollaryname}{Corollary}
 \providecommand{\theoremname}{Theorem}
 \providecommand{\exercisename}{Exercise}
+
+\newref{problem}{refcmd={\problemname~\ref{#1}}}
 
 %Fancy header and footer configuration
 \fancyhf{}

@@ -6,6 +6,17 @@
 		\item Prove that no map in Part 2 can be bijective.
 	\end{enumerate}
 \end{problem}
+\begin{solution}\hfill
+	\begin{enumerate}
+		\item Continuous image of compact set is compact.
+		\item ``Start'' at $1/2$, go down to $0$, go up to $1$, ``end'' at $1/2$.
+		\item If you want to be super-overkill, you could invoke Invariance of Domain in the 1-dimensional case. But I think the proof of that probably uses the IVT in some way anyway, so may as well prove it with IVT.
+		
+		Mildly clever IVT proof: let $f(a) = 0$, $f(b) = 1$. From IVT deduce that $f([a,b]) = [0,1]$ (or $f([b,a])=[0,1]$, as the case may be).
+		
+		Less clever ``intuitive'' IVT proof: consider $f(a) = 0$ and look at some small interval around $a$ and argue non-injectivity using that.
+	\end{enumerate}
+\end{solution}
 
 \begin{problem}
 	Let $f$ be a $C^2$ function on the real line. Assume $f$ is bounded with bounded second derivative. Let
@@ -17,10 +28,60 @@
 		\sup_{x\in \bb{R}} |f'(x)| \leq 2\sqrt{AB}.
 	\]
 \end{problem}
+\begin{solution}
+	As Albert mentioned, if you see ``$C^2$,'' chances are it's a Taylor expansion problem. Another hint is that we're asked to relate various derivatives of the function to one another, and the Taylor expansion gives a good way of doing that.
+	
+	Then for every $x,h$, there exists a $\xi$ between $x$ and $x+h$ such that
+	\[
+		f(x + h) = f(x) + f'(x)h + \frac{f''(\xi)h^2}{2!}
+	\]
+	which means
+	\begin{align*}
+		|f'(x)| &= \left|\frac{1}{h} \left(f(x+h) - f(x) - \frac{f''(\xi)h^2}{2}\right)\right|\\
+		&\leq \frac{2A}{h} + \frac{Bh}{2}
+	\end{align*}
+	for all $h$. If you compute the minimum of the RHS, you'll find that it's $2\sqrt{AB}$ as desired. 
+\end{solution}
+
+\begin{rem*}
+	Here are some ways to prove convergence.
+	\begin{itemize}
+		\item If you're working in a complete metric space, you could show that the sequence is Cauchy. This may be useful if there's no clear putative limit.
+		\item Monotone and bounded.
+		\item Squeeze liminf and limsup together; i.e. show $\liminf \geq \limsup$ so they must be equal.
+	\end{itemize}
+\end{rem*}
 
 \begin{problem}
 	Let $x_n$ be a sequence of real numbers so that $\lim_{n\to \infty} (2x_{n+1} - x_n) = x$. Show that $\lim_{n\to\infty} x_n = x$.
 \end{problem}
+\begin{solution}[1]
+	There's a ``slick'' proof that Albert showed, but I put the word slick in quotes because it actually ends up being kind of long. The idea is that we have a wishful method that doesn't really quite work, but we use it to slowly approach a method which does work.
+	
+	The wishful approach is fueled by an ``addition by zero'' trick:
+	\begin{align*}
+		\lim_{n\to\infty} x_n &= \lim_{n\to \infty} \left( x_n - \frac{x_{n-1}}{2} + \frac{x_{n-1}}{2}\right)\\
+		&= \frac{x}{2} + \frac{1}{2} \lim_{n\to \infty} x_{n}
+	\end{align*}
+	and then to solve for $\lim_{n\to\infty} x_n$.
+	
+	We can't legally make this manipulation because we don't even know the limits are defined! Reducing to the problem of existence is actually not much of a reduction... However, we can do a similar argument using liminf and limsup. These are always defined, and the condition for them to be finite (so we can manipulate them as above) is just for $x_{n}$ to be bounded. Let's first assume that's the case, and see how the argument would go:
+	\begin{align*}
+		\limsup_{n\to\infty} x_n &\leq \limsup_{n\to \infty} \left( x_n - \frac{x_{n-1}}{2} \right) + \limsup_{n\to \infty}\frac{x_{n-1}}{2}\\
+		&= \frac{x}{2} + \frac{1}{2} \lim_{n\to \infty} x_{n}\\
+		\limsup_{n\to \infty} x_n &\leq x.
+	\end{align*}
+	Similarly one deduces $\liminf_{n\to\infty} x_n \geq x$, so the limit in fact exists and is equal to $x$.
+	
+	All that remains is to explain why $x_n$ is bounded. For that we can do ``addition by zero'' repeatedly to write
+	\[
+		x_n = \sum_{i=1}^n 2^{i-n-1}\left(2x_i - x_{i-1}\right) + 2^{-n} x_0.
+	\]
+	Since $(2x_i - x_{i-1})$ is convergent, it is bounded---and from there it is straightforward to show that $x_n$ is bounded as well.
+\end{solution}
+\begin{solution}[2]
+	My direct proof just used the definition of convergence. If you go out far enough, $(x_n - 2x_{n-1})$ is within an $\epsilon$-neighborhood of $x$; use that to show $x_n - x$ ends up within some small neighborhood (e.g. $2\epsilon$) of $0$.
+\end{solution}
 
 \begin{problem}
 	Let $a$ and $x_0$ be positive numbers, and define the sequence $(x_n)_{n=1}^\infty$ recursively by
@@ -29,6 +90,17 @@
 	\]
 	Prove that this sequence converges, and find its limit.
 \end{problem}
+\begin{solution}
+	Bless the bit of dynamical systems work I did in high school... if you draw a picture (a graph of the recursion $f(x)$ together with the diagonal $y=x$) and play around with it, this problem is very easy, especially since the minimum of the recursion coincides with its fixed point: $\sqrt{a}$.
+	
+	Steps of the proof:
+	\begin{enumerate}
+		\item Reduce to the case $x_0 \geq \sqrt{a}$ since if that isn't the case, you get it by applying $f$ once.
+		\item Show that if $\sqrt{a} \leq x_n$, then $\sqrt{a} \leq x_{n+1} \leq x_n$. This can be done just by noting, in some way, that the graph of $f$ is below the diagonal for $x_0 \geq \sqrt{a}$.
+		\item Deduce convergence (monotone and bounded).
+		\item Note that since $f$ is continuous, if a sequence of iterates converges, it must be to a fixed point. Or use the limit trick from the preceding problem (this time we're fine since we already know it exists); i.e. just take the limit of the recursion as $n\to \infty$. Or argue by contradiction, as in \problemref{ODE-manual-gradual-proof}, to show that it can't converge to anything strictly higher than $\sqrt{a}$.
+	\end{enumerate}
+\end{solution}
 
 \begin{problem}
 	Suppose $f$ is a continuous real valued function. Show that
@@ -37,6 +109,15 @@
 	\]
 	for some $\xi \in [0,1]$.
 \end{problem}
+\begin{solution}
+	It was a little confusing to wrap my head around the IVT hint, but really you proceed by writing down what little you can deduce from such weak assumptions:
+	\[
+		\frac{m}{3} = m \int_0^1 x^2 \mathrm{d} x \leq \int_0^1 f(x) x^2 \mathrm{d} x \leq M \int_0^1 x^2 \mathrm{d}x = \frac{M}{3}.
+	\]
+	where $m,M$ are the minimum and maximum of $f$ on $[0,1]$. It follows that, by IVT, there must be some $\xi$ between $m$ and $M$ inclusive such that $\frac{f(\xi)}{3}$ is equal to the middle expression.
+	
+	Another perspective from Albert: precisely \emph{because} the assumptions are so weak (you only know $f$ is continuous) and you are asked for existence of something in some interval, chances are IVT is involved somehow.
+\end{solution}
 
 \begin{problem}
 	Let $0\leq a \leq 1$ be given. Determine all nonnegative continuous functions $f$ on $[0,1]$ which satisfy the following three conditions:
@@ -44,3 +125,24 @@
 		\int_0^1 f(x) \mathrm{d}x = 1, \quad \int_0^1 xf(x) \mathrm{d}x = a, \quad \int_0^1 x^2 f(x) \mathrm{d}x = a^2.
 	\]
 \end{problem}
+\begin{solution}[1, Cauchy-Schwarz]
+	This one is kind of tricky, in that it was the one problem on this sheet I couldn't figure out any solution to (not even an ugly one) before Albert went over them in class.
+	
+	Reverse engineering motivation (a.k.a. hindsight is 20/20): we're dealing with a bunch of integrals of products of various similar-looking functions---perhaps we could interpret the integral as a pairing and make use of CS. The first thing you might try to do is
+	\[
+		\left(\int_0^1 x^n f(x) \mathrm{d} x\right)^2 \leq \int_0^2 x^{2n} \mathrm{d} x \int_0^1 f(x)^2 \mathrm{d} x
+	\]
+	but this manipulation isn't very useful, mostly because we don't know anything about $\int_0^1 f(x)^2 \mathrm{d} x$.
+	The trick is to instead split $xf(x)$ as $x\sqrt{f(x)} \cdot \sqrt{f(x)}$ (which we can do because we are told that $f$ is non-negative, a fact that we otherwise would not have used!), in which case CS gives
+	\[
+		\int_0^1 x f(x) \mathrm{d}x \leq \int_0^1 x^2 f(x)\mathrm{d}x \int_0^1 f(x) \mathrm{d}x
+	\]
+	That looks much better. With the constraints in the problem, we actually have equality, and equality only happens in CS when the two vectors being paired are linearly dependent. But this is clearly impossible: if $f(x)$ is nonzero for at least two different values of $x$, then $x\sqrt{f}$ and $\sqrt{f}$ cannot be linearly dependent. And of course, this must be the case since $\int f = 1$.
+\end{solution}
+\begin{solution}[2, Jensen's]
+	Incidentally, apparently the ``J'' in ``Jensen'' is pronounced as a ``Y.'' I feel like I probably should've known this, given how many times I've seen this inequality used in lectures before... but still, worth taking a note of, I guess.
+	
+	This one is a bit easier to reverse engineer motivation for: anyone that has taken a probability class should recognize those integrals as moments! The constraints of the problem tell us that $f$ can be thought of as a probability distribution on $[0,1]$, with first moment $a$ and second moment $a^2$. But $\bb{E}[X^2] - \bb{E}[X]^2 \geq 0$ and equality occurs only when $X$ has no variance whatsoever. That would require $f$ to be a point mass distribution, i.e. the Dirac delta function centered at $a$. But that's not even a function, let alone a continuous one. This is a similar conclusion to what we reached in the other solution.
+	
+	These two solutions actually feel pretty similar... they're probably ``equivalent'' in some sense.
+\end{solution}
