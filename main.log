@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  26 JUL 2018 20:16
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (MiKTeX 2.9.6600 64-bit) (preloaded format=pdflatex 2018.3.8)  13 AUG 2018 00:16
 entering extended mode
 **./main.tex
 (main.tex
@@ -1323,55 +1323,75 @@ Overfull \hbox (0.38054pt too wide) in paragraph at lines 131--132
 ght is 20/20): we're deal-ing with a bunch
  []
 
-) [11] [12
+) ("Analysis/Real analysis 2.tex" [11]
+Overfull \hbox (4.93846pt too wide) in paragraph at lines 33--34
+[]\OT1/MinionPro-LF/m/n/10 The \OT1/MinionPro-LF/m/it/10 def-i-ni-tion \OT1/Min
+ionPro-LF/m/n/10 of di-rec-tional deriva-tive at the ori-gin, in the di-rec-tio
+n $\OML/MinionPro-TOsF/m/it/10 v$\OT1/MinionPro-LF/m/n/10 , is $[]\OML/MinionPr
+o-TOsF/m/it/10 f\OMX/MnSymbolE/m/n/10 à\OML/MinionPro-TOsF/m/it/10 tv\OMX/MnSym
+bolE/m/n/10 ç[][]$\OT1/MinionPro-LF/m/n/10 .
+ []
 
-]
+[12]) ("Analysis/Complex analysis 1.tex" [13] [14]
+Overfull \hbox (0.78453pt too wide) in paragraph at lines 43--44
+[]\OT1/MinionPro-LF/m/n/10 Maximum mod-u-lus prin-ci-ple: if $\OML/MinionPro-TO
+sF/m/it/10 f$ \OT1/MinionPro-LF/m/n/10 is holo-mor-phic at $\OML/MinionPro-TOsF
+/m/it/10 z[]$\OT1/MinionPro-LF/m/n/10 , then we can-not have $\OMX/MnSymbolE/m/
+n/10 S\OML/MinionPro-TOsF/m/it/10 f\OMX/MnSymbolE/m/n/10 à\OML/MinionPro-TOsF/m
+/it/10 z[]\OMX/MnSymbolE/m/n/10 çS \U/MnSymbolD/m/n/10 C
+ []
+
+) ("Analysis/Complex analysis 2.tex" [15]) [16]
 Chapter 2.
-("Algebra/Group theory.tex" [13] [14]) ("Algebra/Rings 1.tex" [15]
+("Algebra/Group theory.tex" [17
+
+] [18]) ("Algebra/Rings 1.tex" [19]
 LaTeX Font Info:    Try loading font information for U+euf on input line 6.
 
 ("C:\Program Files\MiKTeX 2.9\tex\latex\amsfonts\ueuf.fd"
 File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
-) [16] [17] [18])
-[19]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 18.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 18.
- (main.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 18.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 18.
+) [20] [21] [22])
+("Algebra/Rings 2.tex" [23]) ("Algebra/Linear algebra 1.tex")
+("Algebra/Linear algebra 2.tex") ("Algebra/Linear algebra 3.tex") [24]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 25.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 25.
+
+(main.aux)
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 25.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 25.
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 161CA3C4B2DA3899BA5FD18A7C0E7A38;445.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 18.
+(rerunfilecheck)             Checksum: 70146C500EF856B1F2C5FF3A6521F284;727.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 25.
  ) 
 Here is how much of TeX's memory you used:
- 30870 strings out of 493303
- 590184 string characters out of 3138834
- 601034 words of memory out of 3000000
- 33894 multiletter control sequences out of 15000+200000
- 672648 words of font info for 88 fonts, out of 3000000 for 9000
+ 30931 strings out of 493303
+ 591712 string characters out of 3138834
+ 601032 words of memory out of 3000000
+ 33902 multiletter control sequences out of 15000+200000
+ 673173 words of font info for 91 fonts, out of 3000000 for 9000
  1141 hyphenation exceptions out of 8191
  63i,12n,82p,700b,508s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_jidws5.enc}{C:/Progr
-am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/Mi
-KTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fo
-nts/enc/dvips/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
-ps/mnsymbol/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPr
-o/a_so5ulq.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.
-enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_snxwoh.enc}{C:/Pro
-gram Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_6lqhnj.enc}{C:/Program Files/
-MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_7bszhd.enc}{C:/Program Files/MiKTeX 2.9/
-fonts/enc/dvips/MinionPro/a_knduqf.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1
-/adobe/MinionPro/MinionPro-Bold.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/ad
-obe/MinionPro/MinionPro-It.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/M
-inionPro/MinionPro-Regular.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/
-mnsymbol/MnSymbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbo
-l/MnSymbol7.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/
-eufm10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msb
-m10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.
-pfb>
-Output written on main.pdf (19 pages, 299658 bytes).
+am Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolS.enc}{C:/Program Files/Mi
+KTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolD.enc}{C:/Program Files/MiKTeX 2.9/fo
+nts/enc/dvips/mnsymbol/MnSymbolA.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvi
+ps/mnsymbol/MnSymbolE.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol
+/MnSymbolF.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_so5ulq.
+enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/dvips/mnsymbol/MnSymbolC.enc}{C:/Pro
+gram Files/MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_snxwoh.enc}{C:/Program Files/
+MiKTeX 2.9/fonts/enc/dvips/MinionPro/a_6lqhnj.enc}{C:/Program Files/MiKTeX 2.9/
+fonts/enc/dvips/MinionPro/a_7bszhd.enc}{C:/Program Files/MiKTeX 2.9/fonts/enc/d
+vips/MinionPro/a_knduqf.enc}<C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/Mini
+onPro/MinionPro-Bold.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/MinionP
+ro/MinionPro-It.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/adobe/MinionPro/Mi
+nionPro-Regular.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/Mn
+Symbol10.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/mnsymbol/MnSymbol7
+.pfb><C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/euler/eufm10.pfb>
+<C:/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm10.pfb><C:
+/Program Files/MiKTeX 2.9/fonts/type1/public/amsfonts/symbols/msbm7.pfb>
+Output written on main.pdf (24 pages, 330835 bytes).
 PDF statistics:
- 269 PDF objects out of 1000 (max. 8388607)
- 86 named destinations out of 1000 (max. 500000)
- 69 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 334 PDF objects out of 1000 (max. 8388607)
+ 115 named destinations out of 1000 (max. 500000)
+ 101 words of extra memory for PDF output out of 10000 (max. 10000000)
 

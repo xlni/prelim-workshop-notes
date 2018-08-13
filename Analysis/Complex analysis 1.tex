@@ -1,0 +1,47 @@
+\section{8/3/18: Complex analysis 1}
+Morera's theorem is a useful way of proving that something is holomorphic when you aren't given much else about the function. Holomorphic functions enjoy many properties that real differentiable functions do not: for example the uniform limit of holomorphic functions is also holomorphic, while the analogous statement for real functions is blatantly false by Stone-Weierstrass (any continuous function on a closed interval can be approximated uniformly by polynomials).
+
+By the way, for Morera's theorem, you need only show that the integral is zero on all elements of a family $\mathcal{F}$ of toy contours which is closed under translation and dilation. So for example, the family of all circles would suffice.
+
+If a holomorphic function is bounded near a singularity, then that singularity is removable. A singularity $a$ is removable, by definition, when $\lim_{z\to a} (z-a)f(z) = 0$.
+
+Open mapping theorem: If $U$ is a domain (connected open subset) and $f\colon U\to \bb{C}$ is holomorphic and \emph{non-constant}, then it is open. Contrast this with the real case (consider a parabola for example).
+
+By the way, that means that if you have a non-constant holomorphic map from an open set to any set $C\subset\bb{C}$, the image of the map lands in the interior of $C$. This is useful if $C$ is the closed unit disk for example, because then we can use many of the below tools on the open unit disk.
+
+Conformal map: holomorphic with everywhere nonzero derivative. Note that this is a local condition: preserving angles. Some people use conformal to mean ``one-to-one and holomorphic,'' which is stronger and involves a global condition that is not satisfied by e.g. the exponential function. Why is this stronger? One-to-one and holomorphic implies nonzero derivative everywhere. This can proved by contradiction using series expansion and Rouch\'e's theorem.
+
+Schwarz lemma: should be considered for just about any problem about the open unit disk $\bb{D}$. Let $f\colon \bb{D} \to \bb{D}$ be holomorphic and $f(0)=0$. Then $|f(z)| \leq |z|$ and $|f'(0)| \leq 1$. Moreover, if equality holds for either of the preceding inequalities for \emph{some} value of $z$, then $f$ is in fact a rotation.
+
+If you're asked to find the maximum possible value of some holomorphic function at a given point given some constraints on the function, this lemma may be useful.
+
+Blaschke factor: often used in tandem with the preceding. Special function with nice properties:
+\begin{itemize}
+	\item $f_{z_0} \colon \bb{D} \to \bb{D}$ is an automorphism. In fact, it is its own inverse.
+	\item $f_{z_0}(z_0) = 0$.
+\end{itemize}
+The formula is given by
+\[
+	f_{z_0}(z)=\frac{z-z_0}{\overline{z_0} z - 1}, \quad z_0 \in \bb{D}
+\]
+though often times just knowing such a function exists is enough to solve problems.
+
+Mobius transformation: useful for mapping between half-plane and unit disk. We construct a map from the upper half-plane to the unit disk by
+\[
+	\frac{z-i}{z+i}
+\]
+since points in the upper half-plane are closer to $i$ than to $-i$. There is a map $GL(2,\bb{C}) \to Aut(\bb{\widehat{\bb{C}}})$
+which sends
+\[
+	\begin{bmatrix}
+	a & b\\
+	c & d
+	\end{bmatrix} \mapsto \frac{az + b}{cz + d}
+\]
+that is, in fact, a group homomorphism. In particular, this gives a convenient way of composing/inverting Mobius transformations.
+
+Maximum modulus principle: if $f$ is holomorphic at $z_0$, then we cannot have $|f(z_0)| \geq |f(z)|$ for all $z$ in any neighborhood of $z_0$. This can be proven easily using the open mapping theorem. Minimum modulus is fine too, provided it's nonzero. Also useful to state as: a function obtains its maximal modulus along boundary (of closed bounded domain).
+
+Liouville's theorem: an entire bounded function is constant. Proved by using Cauchy's integral formula for the derivative along arbitrarily large circles around any given point.
+
+If you're given constraints on the real part of a function, consider exponentiation. Or if you have constraints on the imaginary part, first multiply by $i$ and then exponentiate.

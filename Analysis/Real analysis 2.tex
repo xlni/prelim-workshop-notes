@@ -1,0 +1,66 @@
+\section{7/30/18: Real analysis 2}
+\begin{problem}
+	Prove that a real valued $C^3$ function $f$ on $\bb{R}^2$ whose Laplacian,
+	\[
+		\frac{\partial^2 f}{\partial x^2} + \frac{\partial^2 f}{\partial y^2},
+	\]
+	is everywhere positive, cannot have a local maximum.
+\end{problem}
+\begin{solution}
+	I don't see what's wrong with just considering $f(x_0,y)$ and $f(x,y_0)$ for a fixed point $(x_0,y_0)$. Perhaps the issue has to do with the definition of $C^3$?
+	
+	Albert's solution is more roundabout and uses the Taylor expansion
+	\[
+		f(\vec{x}) = f(\vec{x}_0) + \nabla f(\vec{x}_0) (\vec{x} - \vec{x}_0) + (\vec{x} - \vec{x}_0) \nabla^2 f(\vec{x}_0) (\vec{x} - \vec{x}_0) + \cdots.
+	\]
+\end{solution}
+
+\begin{problem}
+	Define $f\colon \bb{R}^2 \to \bb{R}$ by $f(x,0) = 0$ and
+	\[
+		f(x,y) = \left( 1 - \cos\frac{x^2}{y} \right) \sqrt{x^2 + y^2}
+	\]
+	for $y\neq 0$.
+	\begin{enumerate}
+		\item Show that $f$ is continuous at $(0,0)$.
+		\item Calculate all directional derivatives of $f$ at $(0,0)$.
+		\item Show that $f$ is not differentiable at $(0,0)$.
+	\end{enumerate}
+\end{problem}
+\begin{solution}
+	\begin{enumerate}
+		\item It suffices to observe that $|f| \leq 2 \sqrt{x^2 + y^2}$.
+		\item The \emph{definition} of directional derivative at the origin, in the direction $v$, is $\deriv[t]f(tv) \Big\rvert_{t=0}$. If $v = (a,b)$ with $b\neq 0$ then this is
+		\[
+			\deriv[t] \left(1 - \cos \frac{a^2 t}{b}\right) t|v|.
+		\]
+		which evaluates to $0$ at $t=0$. If $b=0$ then the derivative is also 0.
+		\item Because all directional derivatives are equal to 0, one might be tempted to conclude that the function is differentiable, with derivative 0. Indeed, if it \emph{were} differentiable, this would have to be the derivative. But this is not the case, because we can consider the curve $r(t) = (t, t^2)$. $f(r(t)) / |r(t)|$ does not approach 0 as $t\to 0$.
+	\end{enumerate}
+\end{solution}
+
+I'm too lazy to write out explicit solutions for the rest, so I'll just summarize the takeaways.
+
+If you're asked to show that the image of a function contains a neighborhood of some point, it's a good bet that you'll need to use the Inverse Function Theorem (show that the Jacobian at the appropriate point has nonzero determinant).
+
+If you need to compute the derivative of a matrix function, you could write it out explicitly, or you can make use of directional derivatives. Namely, we can compute the derivative of $F$ in the direction of $A$ at the point $B$ via
+\[
+	(D_B F) A = \deriv[t] f(B+tA) \Big\rvert_{t=0}.
+\]
+The RHS is univariate, so it is easy to differentiate.
+
+If $X$ is some \emph{connected} space and you want to show that some set $S \subset X$ is the entirety of $X$, you could try showing that $S$ is both open and closed (and non-empty).
+
+It's easy to show that if the Jacobian of a map is everywhere invertible, then the map is open.
+
+Proper maps are closed. Argument: if $y$ is a limit point of $f(C)$, take $y_n \to y$ inside $f(C)$. Note that $\{y_n\} \cup \{y\}$ is compact, so by properness its preimage is as well. So pick $x_n \mapsto y_n$ where $x_n \in C$ and consider a convergent subsequence...
+
+For metric spaces, a continuous map is proper if and only if every sequence that escapes to infinity is mapped to such a sequence as well. (Escapes to infinity: for every compact set $S$, only finitely many of the points are inside $S$.)
+
+In problems involving periodic functions, consider using the Fourier transform. By the way, the equidistribution theorem about numbers like $a+b\alpha$ ($a,b\in\bb{Z}$, $\alpha$ irrational) is proved using Fourier series. Probably the most useful sufficient criterion about Fourier series convergence is as follows: if the function $f$ is continuous and its Fourier coefficients are absolutely summable, then its Fourier series converges uniformly to $f$. The Fourier coefficients are given by
+\[
+	\int_I e^{-2\pi i n x} f(x) \mathrm{d} x
+\]
+up to some appropriate constant (which can easily be determined by thinking of the expression as an inner product). For playing around with these integrals, shifting the variable of integration and exploiting periodicity can be helpful.
+
+L'Hopital's rule \emph{assumes} the existence of $\lim f'/g'$. The existence of $\lim f/g$ does not necessitate the existence of $\lim f'/g'$. Example: $f(x) = x^2 \sin(1/x)$ (a very common counterexample) and $g(x)=x$.

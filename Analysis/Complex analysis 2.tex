@@ -1,0 +1,28 @@
+\section{8/8/18: Complex analysis 2}
+S\&S has the following example of a function which is holomorphic on $\bb{D}$, can be extended continuously to $\overline{\bb{D}}$, but cannot be extended holomorphically past:
+\[
+	\sum_{n=0}^\infty 2^{-n\alpha}z^{2^n}
+\]
+for some $0<\alpha<\infty$. Trying to \emph{prove} this, however, is not that easy (I haven't done it). It's a particularly pathological example involving a nowhere-differentiable function.
+
+There are three kinds of actual singularities: removable, pole, and essential. They can be distinguished using the Laurent series about the singularity: consider what happens to behavior around the point after multiplying the function by $(z-z_0)^n$. If using $n=1$ causes the function to approach 0 at $z_0$, then it's removable. If this is achieved by some higher power, then it's a pole (if $n=2$, then we have a simple pole, corresponding to the $a_{-1}/(z-z_0)$ term being the lowest in the series expansion). If this is not achieved by any value of $n$, then the singularity is essential.
+
+There's another kind of ``singularity'' to keep in mind: branch points. Basically, some functions can't be defined globally (for topological reasons or otherwise), or more specifically, in a neighborhood around a specific point. Consider $f(z) = \sqrt{z}$, which cannot be defined in a neighborhood of the origin. Such examples can be useful for exhibiting holomorphic functions that can't be extended in certain ways.
+
+Identity theorem: if a holomorphic function vanishes on a domain with an accumulation point, then it is identically zero.
+
+Schwarz reflection principle: often used in tandem with the preceding. If $f(z)$ is holomorphic, so is $\overline f(\overline{z})$. That's the trivial form: a less trivial form states that it's possible to extend a holomorphic function across the real axis if it takes real values on the real axis. The subtlety is holomorphicity along the axis, but that can be shown using Morera's theorem.
+
+Generalized Liouville's theorem: if there exists $c$ such that $|f(z)| \leq c|z|^n$ for sufficiently large $|z|$, then $f$ is a polynomial of degree at most $n$. Proved using induction, with ordinary Liouville's as base case.
+
+Got a pole at infinity? Consider the function $f(1/z)$ instead to get a pole at zero.
+
+Laurent expansion is a powerful tool that is worth trying, especially for analyzing singularities.
+
+For an essential singularity, for \emph{any} complex number $w$, it is possible to pick a sequence converging to the singularity whose image under $f$ converges to $w$. Little/great Picard's theorems. Little: an entire and non-constant function misses at most one point. Great: on any punctured neighborhood of an essential singularity, the image of $f$ misses at most one point. Great can be used to prove little by considering polynomial and non-polynomial cases separately.
+
+Rouch\'e's theorem: a useful tool for counting roots with multiplicity. Might as well remember the symmetric version: if
+\[
+	|f(z)-g(z)| < |f(z)| + |g(z)|
+\]
+everywhere on the simple contour $\partial K$ for some bounded region $K$, then $f,g$ have the same number of roots counting multiplicity inside $K$. Proof: homotopy invariance of winding number (which counts number of roots with multiplicity).
