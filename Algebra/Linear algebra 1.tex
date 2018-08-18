@@ -1,0 +1,20 @@
+\section{8/1/18: Linear algebra 1}
+Linear algebra is ubiquitous but also tricky to recognize at times. It's not always obvious how to identify a problem as a linear algebra problem and see what the relevant vector spaces and linear transformations are. An example: the vector space of all polynomials (perhaps up to some degree) and maybe with the evaluation map at a fixed point as a linear map to $k$.
+
+The rank of a matrix can be computed as the largest $m$ for which there exists a $m\times m$ submatrix (potentially not contiguous) that is non-singular.
+
+Induction may be useful for computing determinants, especially when the matrix has smaller submatrices of a similar form. Also, if the matrix involves indeterminates, consider the determinant as a function of said indeterminates and consider e.g. its roots. This is how one can compute the determinant of the Vandermonde matrix, for instance.
+
+The Vandermonde matrix is also interesting because it encodes polynomial evaluation at a certain number of points. This is an easy way of showing that it's invertible, and also useful for e.g. Lagrange interpolation.
+
+The elementary row (resp. column) operations are scaling, interchange, and adding a multiple of one to another. The first scales the determinant by the same amount. The second multiplies the determinant by $-1$. The third does not affect the determinant.
+
+Of course, there is also the very important fact that $\det A = \prod \lambda_i$ where the $\lambda_i$ are the eigenvalues of $A$, repeated with correct algebraic multiplicity. This is proved by evaluating the characteristic polynomial at 0.
+
+A matrix $A$ satisfies its own characteristic polynomial $p_A$; this is the Cayley-Hamilton theorem (Atiyah-Macdonald has a proof in a very general setting). The ideal of all polynomials which kill $A$ is principal since $k[x]$ is a PID; let $\mu_A$ be a monic generator thereof. Then $\mu_A$ is uniquely determined and is the minimal polynomial of $A$. Evidently $\mu_A$ divides every other polynomial which kills $A$, including $p_A$.
+
+When doing matrix computations with $A$, consider working in $k[x]/(\mu_A)$ to make life simpler. In other words, use the minimal polynomial to simplify expressions involving $A$.
+
+If the geometric multiplicity of every eigenvalue is $1$, then $\mu_A = p_A$. If the geometric multiplicity is equal to the algebraic multiplicity for every eigenvalue, which is to say that the space has a basis of eigenvectors of $A$ and thus $A$ is diagonalizable, then $\mu_A$ has no repeated roots.
+
+The minimal and characteristic polynomials are preserved by conjugation (similarity) and are independent of the base field---enlarging the base field will not affect the minimal polynomial, as it does not affect linear relations between powers of $A$.

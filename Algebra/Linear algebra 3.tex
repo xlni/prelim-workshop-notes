@@ -1,0 +1,26 @@
+\section{8/10/18: Linear algebra 3}
+Last part of linear algebra sequence in the workshop, focusing on inner products / quadratic forms. A bilinear pairing can be encoded by a matrix, symmetric if the pairing is symmetric (Hermitian if the pairing is Hermitian).
+
+Such a matrix $A$ is positive definite if $\langle Av,v \rangle = v^* A v > 0$ for all $v$. It is positive semi-definite if $\langle Av,v \rangle = v^* A v \geq 0$ for all $v$.
+
+A necessary and sufficient condition for positive definiteness is Sylvester's criterion, which says that it is equivalent to having all upper-left square submatrices have positive determinant. The analogous statement for semi-definiteness is \emph{not} true.
+
+Sylvester's law of inertia states that quadratic forms over $\bb{R}$ are classified by their signature: the pair $(p,m)$ which records the number of $+1$s and $-1$s along the diagonal once the form is diagonalized. This is \emph{not} true over $\bb{F}_p$ for example---the culprit is that it is possible for the sum of two squares to be a non-square, so the signature of a form is not well-defined.
+
+Hermitian and symmetric matrices have real eigenvalues (move it through the pairing to show $\lambda = \bar{\lambda}$). Orthogonal and unitary matrices have norm 1 eigenvalues.
+
+Gram-Schmidt is a useful algorithm for obtaining an orthogonal basis from any basis. The normalization step, however, needs some assumptions regarding the non-degeneracy and positivity of the inner product with respect to which we are operating. The algorithm starts with a basis $u_1,\ldots,u_n$. Let $U_k$ denote the span of $u_1,\ldots,u_k$, and let $U_0 = 0$. Then the algorithm defines
+\[
+	v_i = u_i - \operatorname{proj}_{U_{i-1}} u_i.
+\]
+The projection portion is most easily using $v_1,\ldots,v_{i-1}$. We note that this process produces a basis for which the span of $u_1,\ldots,u_k$ agrees with the span of $v_1,\ldots,v_k$ for all $k$. 
+
+The polarization identity expresses the inner product in terms of norms. So it is possible to recover the inner product from the norm. It's not worth memorizing, but if you need to reproduce it for whatever reason, try playing around with $\lVert x \pm y \rVert^2$ (together with $\lVert x \pm iy \rVert^2$ in the Hermitian case) to obtain $\langle x,y \rangle$.
+
+If $A$ is a Hermitian matrix, then the Rayleigh quotient is a map $V \setminus \{0\} \to \bb{R}$ defined by
+\[
+	v \mapsto \frac{\langle Av,v \rangle}{\langle v,v \rangle}.
+\]
+Its image is exactly the interval $[\lambda_{min},\lambda_{max}]$, with the minimum and maximum attained when $v$ is an eigenvector for the corresponding eigenvalue.
+
+The matrix exponential is defined using a series which is always convergent---this can be shown by bounding the entries of the matrix for each term of the series. Using the formula stated in the preceding section, one can easily compute $e^A$ when $A$ is in Jordan form.

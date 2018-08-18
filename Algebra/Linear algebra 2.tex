@@ -1,0 +1,29 @@
+\section{8/6/18: Linear algebra 2}
+A matrix is upper triangularizable over $F$ iff the char poly splits in $F$. Matrices are triangularizable by unitary matrices over $\bb{C}$. Triangularization can be useful for seeing the multiset of eigenvalues with algebraic multiplicity (the diagonal entries) and also for showing that geometric multiplicity is at most algebraic multiplicity.
+
+A matrix is diagonalizable over $F$ iff the minimal polynomial splits in $F$ with no repeated roots. Easy to prove if you consider what $\ker \mu_A(A)$ has to be.
+
+Spectral theorems:
+\begin{itemize}
+	\item A real symmetric matrix is diagonalizable over $\bb{R}$ by an orthogonal matrix.
+	\item A normal matrix is diagonalizable over $\bb{C}$ by a unitary matrix. Normal matrices satisfy $A^* A = AA^*$, so in particular they include Hermitian matrices, for which $A = A^*$.
+\end{itemize}
+The proof is pretty easy for Hermitian matrices---use algebraic closure of $\bb{C}$ to obtain one eigenvalue and then decompose the space orthogonally. It's straightforward to show that the eigenvalues of a real symmetric matrix are real. For normal matrices the proof uses Schur decomposition: any complex matrix can be written in the form $UTU^*$ where $U$ is unitary and $T$ is upper triangular.
+
+A lot of these proofs revolve around the consideration of invariant subspaces, which are often eigenspaces. For example: proving that commuting diagonalizable matrices are simultaneously diagonalizable. A set of commuting square matrices has an eigenvector common to all the matrices.
+
+JCF and RCF are unique up to permutation of the blocks / companion matrices. JCF exists whenever the char poly splits, while RCF always exists. Matrices are similar iff they have the same JCF (or the same RCF). A matrix is diagonalizable exactly when its Jordan form is diagonal, meaning that all its Jordan blocks are trivial.
+
+To determine what the Jordan blocks are, for each eigenvector $\lambda$, consider the growth of $\dim \ker (A - \lambda I)^n$ with respect to $n$. The quantity $\dim \ker (A - \lambda I )^{n} - \dim \ker (A-\lambda I )^{n-1}$ tells you the number of Jordan blocks for $\lambda$ of size \emph{at least} $n$.
+
+The minimal polynomial of a block-diagonal matrix is the lcm of the minimal polynomials of the blocks. When the block matrix is in e.g. Jordan form, the block minimal polys are easy to read off.
+
+There's also a convenient expression for $p(J^n_\lambda)$:
+\[
+	\begin{bmatrix}
+	p(\lambda) & p'(\lambda) & p''(\lambda)/2! & \cdots \\
+	& p(\lambda) & p'(\lambda) & \cdots \\
+	&& \ddots & \cdots
+	\end{bmatrix}.
+\]
+When $p$ is not a polynomial, this could also give you a hint of when $p(A)$ exists or doesn't exist. For example, it would be problematic if you tried to take the square-root of a matrix with a non-trivial Jordan block for $\lambda = 0$.
